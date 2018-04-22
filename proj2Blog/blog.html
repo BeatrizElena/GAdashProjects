@@ -3,7 +3,8 @@
 <head>
   <title>Beatriz' Blog</title>
   <link href="/normalize.css" rel="stylesheet">
-   <link rel="stylesheet" type="text/css" href="blog.css">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -30,5 +31,12 @@
     <p>ethical thundercats sustainable locavore quinoa Neutra. Aesthetic tacky sweater single-origin coffee, bicycle rights organic lo-fi street art american apparel ennui four loko ethnic Brooklyn small batch. Forage YOLO polaroid</p>
     <button>Like</button>
   </article>
+
+  <script>
+    $("button").on("click", function() {
+      alert("Thank you for reading. Now take a hike!");
+    });
+  </script>
+
 </body>
 </html>
