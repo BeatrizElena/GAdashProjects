@@ -1,0 +1,51 @@
+body {
+     background:  rgba(250, 150, 56, 0.7);
+    }
+    header {
+      text-align: center;
+      background: url('https://i.imgur.com/uNPfJB6s.jpg');
+      background-size: cover;
+      color: rgba(250, 160, 50, 0.7);
+    }
+    a {
+      color: rgba(250, 160, 50, 0.7);
+    }
+    h1 {
+      font-size: 60px;
+      font-family:'Libre Baskerville', serif;
+    }
+    h2 {
+      font-family:'Libre Baskerville', serif;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      border: 2px solid rgba(0, 255, 210, .3);
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,50,0,0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    button {
+     background: rgba(0,150,0,0.5);
+     border-radius: 10px;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
