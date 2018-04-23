@@ -4,6 +4,16 @@ div {
   width: 300px;
   margin: 0 auto;
 }
+.brain {
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5; /* gradiant gives robot one centered, big eye */
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background-size: 75px 150px; /* trick gradient into treating bckgrnd size's width as 1/2 of what it is. Hgt will be the same. This makes 2 gradients, aka 2 eyes. */
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 10px 10px;
+  border-bottom: 40px solid #666; /* contrasting grey border to bottom of div shape */
+}
 .torso {
   height: 0;
   width: 140px;
