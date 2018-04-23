@@ -49,6 +49,13 @@ p {
   position: absolute;
   bottom: 0;
   margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+small {
+  opacity: 0;
 }
 .first{
   background-image: url("https://i.imgur.com/DCXuYYp.png?1");
@@ -61,4 +68,30 @@ p {
 }
 .price {
   float: right;
+}
+/* if the screen is <500 px, style the page as follows: */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 30px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 15px;
+    margin: 15px 0 20px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 14px;
+  }
+  li {
+    display: block;
+    padding: 5px;
+  }
 }
