@@ -10,3 +10,5 @@ https://dash.generalassemb.ly/projects
     - Styling with margin, padding, border-radius, and other CSS. Centering with <code>margin: 0 auto;</code>
 
 2. Adding web fonts and color fades: Spans, gradients, transparency, & web fonts
+4. Adding responsive design.
+5. Adding jQuery toggle function to show/hide item descriptions.
