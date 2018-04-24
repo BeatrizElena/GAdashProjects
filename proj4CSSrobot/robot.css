@@ -32,6 +32,32 @@
   border-right: 75px solid transparent;
   border-radius: 20px 20px 100px 100px;
 }
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(125deg);
+  -webkit-transform: rotate(185deg);
+  -moz-transform: rotate(185deg);
+  position: relative;
+  left: -1790px;
+  top: -370px;
+  z-index: -1;
+}
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  left: 240px;
+  top: -900px;
+  z-index: -1;
+}
 .foot {
   height: 40px;
   width: 40px;
@@ -40,6 +66,6 @@
   border: 15px solid #999;
   position: relative;
   left: 110px;
-  top: -10px;
+  top: -600px;
   z-index: -1;
 }
