@@ -28,10 +28,12 @@
     background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
   }
 }
-.brain {
+.laser {
   animation: blink .5s infinite; /* assign blink animation to brain, make it 1/2 sec long, repeat infinitely */
   -webkit-animation: blink .5s infinite;
   -moz-animation: blink .5s infinite;
+}
+.brain {
   background: radial-gradient(circle, white 15%, transparent 40%), #cc5; /* gradiant gives robot one centered, big eye */
   background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
   background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
@@ -87,4 +89,9 @@
   left: 110px;
   top: -600px;
   z-index: -1;
+}
+button {
+  position: relative;
+  left: 50px;
+  top: -620px;
 }
