@@ -1,0 +1,124 @@
+/* empty div is used initially to create robot's head, torso and feet. Then it;s deleted when CSS positioning is introduced.*/
+.robot {
+  position: relative;
+  left: 200px;
+}
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent; /* apply to all border sides */
+  border-top: 10px solid #777; /* override border css above for the top border only - makes antenna top*/
+  border-bottom: 80px solid #888; /* override border css above for the bottom border only - makes antenna */
+  position: relative;
+  left: 140px;
+}
+/* define animation, give it identifier blink*/
+@keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+@-moz-keyframes blink {
+  50% {
+    background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+  }
+}
+.laser {
+  animation: blink .5s infinite; /* assign blink animation to brain, make it 1/2 sec long, repeat infinitely */
+  -webkit-animation: blink .5s infinite;
+  -moz-animation: blink .5s infinite;
+}
+.brain {
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5; /* gradiant gives robot one centered, big eye */
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background-size: 75px 150px; /* trick gradient into treating bckgrnd size's width as 1/2 of what it is. Hgt will be the same. This makes 2 gradients, aka 2 eyes. */
+  position: relative;
+  left: 70px;
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 10px 10px;
+  border-bottom: 40px solid #666; /* contrasting grey border to bottom of div shape */
+}
+.torso {
+  height: 0;
+  width: 140px;
+  border-top: 300px solid #bc6;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
+}
+.left {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: rotate(125deg);
+  -webkit-transform: rotate(185deg);
+  -moz-transform: rotate(185deg);
+  position: relative;
+  left: -1790px;
+  top: -370px;
+  z-index: -1;
+}
+.right {
+  font-family: 'Poller One', verdana, arial, sans-serif;
+  font-weight: bold;
+  font-size: 250px;
+  color: #666;
+  transform: scaleY(-1) rotate(20deg);
+  -webkit-transform: scaleY(-1) rotate(20deg);
+  -moz-transform: scaleY(-1) rotate(20deg);
+  position: relative;
+  left: 240px;
+  top: -900px;
+  z-index: -1;
+}
+.foot {
+  height: 40px;
+  width: 40px;
+  background: #ccc;
+  border-radius: 40px;
+  border: 15px solid #999;
+  position: relative;
+  left: 110px;
+  top: -600px;
+  z-index: -1;
+}
+button {
+  position: relative;
+  left: 50px;
+  top: -550px;
+  background: #ccc;
+}
+/* keyframe to start image away from the left and then move to its position as defined by img styles */
+@keyframes dance {
+  from {
+    left: 1400px;
+  }
+}
+@-webkit-keyframes dance {
+  from {
+    left: 1400px;
+  }
+}
+@-moz-keyframes dance {
+  from {
+    left: 1400px;
+  }
+}
+/* animate image with assigned dance keyframe */
+img {
+  animation: dance 2s infinite;
+  -webkit-animation: dance 4s infinite;
+  -moz-animation: dance 4s infinite;
+  position: absolute;
+  top: 200px;
+  left: 550px;
+  z-index: -1;
+}

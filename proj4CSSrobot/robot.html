@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+  <title>CSS Robot</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
+  <link href="/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="robot.css">
+</head>
+<body>
+  <div class="robot" id="dance">
+    <div class="beep"></div>
+    <div class="brain"></div>
+    <div class="torso"></div>
+      <div class="left">j</div>
+      <div class="right">j</div>
+    <div class="foot"></div>
+  </div>
+
+  <button class="flash">laser eyes on/off</button>
+  <button class="color">dance with disco colors!</button>
+  <!-- <button class="moves">dance!</button> -->
+
+  <img src="https://i.imgur.com/jo2NYVo.gif">
+
+  <script>
+  // when eyes button is clicked, toggle laser class on and off.
+  $('.flash').click(function() {
+    $('.brain').toggleClass('laser');
+  });
+
+  // when color button is clicked, for each color pick a number 0-255
+  $('.color').click(function() {
+    var red = Math.floor(Math.random() * 255);
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+
+    // test: display the three values in an alert window
+    // alert(red + ", " + green + ", " + blue);
+
+    // generate an RGBA value from red, green, and blue values
+    var randomRGBA = 'rgba('+red+', '+green+', '+blue+',1)';
+
+    // test: display the RGBA value in an alert window
+    // alert(randomRGBA);
+
+    // change body's background according to the randomRGBA value
+    $('body').css("background", randomRGBA);
+
+    // start/stop dancing gif
+    $('img').toggle();
+  });
+
+  // $('.moves').click(function() {
+  //   $('img').toggle();
+  // });
+  </script>
+</body>
+</html>
