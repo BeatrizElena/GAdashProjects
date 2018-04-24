@@ -13,7 +13,7 @@
   left: 140px;
 }
 /* define animation, give it identifier blink*/
-@@keyframes blink {
+@keyframes blink {
   50% {
     background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
   }
@@ -93,5 +93,32 @@
 button {
   position: relative;
   left: 50px;
-  top: -620px;
+  top: -550px;
+  background: #ccc;
+}
+/* keyframe to start image away from the left and then move to its position as defined by img styles */
+@keyframes dance {
+  from {
+    left: 1400px;
+  }
+}
+@-webkit-keyframes dance {
+  from {
+    left: 1400px;
+  }
+}
+@-moz-keyframes dance {
+  from {
+    left: 1400px;
+  }
+}
+/* animate image with assigned dance keyframe */
+img {
+  animation: dance 2s infinite;
+  -webkit-animation: dance 4s infinite;
+  -moz-animation: dance 4s infinite;
+  position: absolute;
+  top: 200px;
+  left: 550px;
+  z-index: -1;
 }
