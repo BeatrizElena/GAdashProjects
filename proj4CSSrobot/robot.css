@@ -1,21 +1,20 @@
 /* empty div will be used to create robot's head, torso and feet. */
-div {
-  height: 150px;
-  width: 300px;
-  margin: 0 auto;
-}
 .beep {
   width: 5px;
   height: 0;
   border: 5px solid transparent; /* apply to all border sides */
   border-top: 10px solid #777; /* override border css above for the top border only - makes antenna top*/
   border-bottom: 80px solid #888; /* override border css above for the bottom border only - makes antenna */
+  position: relative;
+  left: 140px;
 }
 .brain {
   background: radial-gradient(circle, white 15%, transparent 40%), #cc5; /* gradiant gives robot one centered, big eye */
   background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
   background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
   background-size: 75px 150px; /* trick gradient into treating bckgrnd size's width as 1/2 of what it is. Hgt will be the same. This makes 2 gradients, aka 2 eyes. */
+  position: relative;
+  left: 70px;
   height: 150px;
   width: 150px;
   border-radius: 60px 60px 10px 10px;
@@ -35,4 +34,8 @@ div {
   background: #ccc;
   border-radius: 40px;
   border: 15px solid #999;
+  position: relative;
+  left: 110px;
+  top: -10px;
+  z-index: -1;
 }
