@@ -1,4 +1,8 @@
-/* empty div will be used to create robot's head, torso and feet. */
+/* empty div is used initially to create robot's head, torso and feet. Then it;s deleted when CSS positioning is introduced.*/
+.robot {
+  position: relative;
+  left: 200px;
+}
 .beep {
   width: 5px;
   height: 0;
