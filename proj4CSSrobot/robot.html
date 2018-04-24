@@ -17,11 +17,22 @@
   </div>
 
   <button class="flash">laser eyes on/off</button>
+  <button class="color">change color!</button>
 
   <script>
   // when eyes button is clicked, toggle laser class on and off.
   $('.flash').click(function() {
     $('.brain').toggleClass('.laser');
+  });
+
+  // when color button is clicked, for each color pick a number 0-255
+  $('.color').click(function() {
+    var red = Math.floor(Math.random() * 255);
+    var green = Math.floor(Math.random() * 255);
+    var blue = Math.floor(Math.random() * 255);
+
+    // test: display the three values in an alert window
+    alert(red + ", " + green + ", " + blue);
   });
   </script>
 </body>
