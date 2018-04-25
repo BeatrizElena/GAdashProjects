@@ -31,8 +31,10 @@
   var nextPrompt = function() {
   //put the currentPrompt in html elements with class .prompt
   $('.prompt').html(prompts[currentPrompt]);
+  // move the next prompt into variable currentPrompt
+  currentPrompt = currentPrompt + 1;
   }
-  
+
   // run nextPrompt fx when button is clicked
   $('.button').click(function() {
     nextPrompt();
