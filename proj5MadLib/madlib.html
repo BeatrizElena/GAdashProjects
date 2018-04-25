@@ -29,11 +29,18 @@
 
   // a fx that will call the next prompt
   var nextPrompt = function() {
-  //put the currentPrompt in html elements with class .prompt
-  $('.prompt').html(prompts[currentPrompt]);
-  // move the next prompt into variable currentPrompt
-  currentPrompt = currentPrompt + 1;
-  }
+    if(currentPrompt < prompts.length) {
+      //put the currentPrompt in html elements with class .prompt
+      $('.prompt').html(prompts[currentPrompt]);
+      // move the next prompt into variable currentPrompt
+      currentPrompt = currentPrompt + 1;
+      }
+      else {
+        // put a message into the html
+        $('.prompt').html("That's all for now!");
+      }
+    }
+
 
   // run nextPrompt fx when button is clicked
   $('.button').click(function() {
