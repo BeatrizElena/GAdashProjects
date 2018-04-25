@@ -49,6 +49,8 @@
   // puts the user's input into the html
   var showFinal = function() {
     $('.prompt').html(answers[0]+ ' ' +answers[1]+ ' ' +answers[2]);
+    // and then hide the button
+    $('button').hide();
   }
 
   // run nextPrompt fx when button is clicked
