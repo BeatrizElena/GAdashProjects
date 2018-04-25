@@ -19,6 +19,9 @@
     'Type a noun'
   ];
 
+  // array to keep answers in
+  var answers = [];
+
   // keep track of current prompt
   var currentPrompt = 0;
 
@@ -26,6 +29,8 @@
   var nextPrompt = function() {
     // if there is a next prompt
     if(currentPrompt < prompts.length) {
+      // test: alert the value of the form
+      // alert($('input').val());
       //put prompt and form in all html elements with class .prompt
       $('.prompt').html(prompts[currentPrompt] + '<br><input type="text">');
       // move the next prompt into variable currentPrompt
