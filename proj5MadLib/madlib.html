@@ -42,11 +42,13 @@
     }
     // or else if we are at the end of the array
     else {
-      // put a message into the html
-      $('.prompt').html("That's all for now!");
-      // test alert to see what's pushed to answers array
-      alert(answers);
+      // run showFinal() to put the answers in the html when there's no more prompts
+      showFinal();
     }
+  }
+  // puts the user's input into the html
+  var showFinal = function() {
+    $('.prompt').html(answers[0]+ ' ' +answers[1]+ ' ' +answers[2]);
   }
 
   // run nextPrompt fx when button is clicked
