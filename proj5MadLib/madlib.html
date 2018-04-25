@@ -27,6 +27,10 @@
 
   // a fx that will call the next prompt
   var nextPrompt = function() {
+    // there's no answer the 1st time nextPrompt() runs
+    if (currentPrompt != 0) {
+      answers.push($('input').val());
+    }
     // if there is a next prompt
     if(currentPrompt < prompts.length) {
       // test: alert the value of the form
@@ -40,6 +44,8 @@
     else {
       // put a message into the html
       $('.prompt').html("That's all for now!");
+      // test alert to see what's pushed to answers array
+      alert(answers);
     }
   }
 
