@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Mad Lib</title>
+   <meta charset="UTF-8">
   <link href="/normalize.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="madlib.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -11,42 +12,39 @@
   <button>Next</button>
 
 <script>
+// list of prompts for the user
   var prompts = [
     'Type your name',
     'Type an adjective',
     'Type a noun'
   ];
-  // test 1
-  // alert(prompts.length);
-  //test 2
-  // alert(prompts[0]);
 
   // keep track of current prompt
   var currentPrompt = 0;
 
-  // test: put 1st prompt in all html elements with class .prompt
-  // $('.prompt').html(prompts[2]);
-
   // a fx that will call the next prompt
   var nextPrompt = function() {
+    // if there is a next prompt
     if(currentPrompt < prompts.length) {
-      //put the currentPrompt in html elements with class .prompt
-      $('.prompt').html(prompts[currentPrompt]);
+      //put prompt and form in all html elements with class .prompt
+      $('.prompt').html(prompts[currentPrompt] + '<br><input type="text">');
       // move the next prompt into variable currentPrompt
       currentPrompt = currentPrompt + 1;
-      }
-      else {
-        // put a message into the html
-        $('.prompt').html("That's all for now!");
-      }
     }
-
+    // or else if we are at the end of the array
+    else {
+      // put a message into the html
+      $('.prompt').html("That's all for now!");
+    }
+  }
 
   // run nextPrompt fx when button is clicked
-  $('.button').click(function() {
+  $('button').click(function() {
     nextPrompt();
   });
 
   // show the first prompt as soon as js loads
   nextPrompt();
 </script>
+</body>
+</html>
