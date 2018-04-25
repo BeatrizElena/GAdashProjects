@@ -4,6 +4,7 @@
   <title>Mad Lib</title>
    <meta charset="UTF-8">
   <link href="/normalize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Shadows+Into+Light" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="madlib.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
@@ -48,7 +49,7 @@
   }
   // puts the user's input into the html
   var showFinal = function() {
-    $('.prompt').html(answers[0]+ ' ' +answers[1]+ ' ' +answers[2]);
+    $('.prompt').html('This is the story of <span class="fill">' +answers[0]+ '</span> and the <span class="fill">' +answers[1]+ '</span> <span class="fill">' +answers[2]+'</span>.');
     // and then hide the button
     $('button').hide();
   }
