@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mad Lib</title>
+  <link href="/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="madlib.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="prompt"></div>
+
+<script>
+  var prompts = [
+    'Type your name',
+    'Type an adjective',
+    'Type a noun'
+  ];
+  // test 1
+  // alert(prompts.length);
+  //test 2
+  // alert(prompts[0]);
+
+  // put 1st prompt in all html elements with class "prompt"
+  $('.prompt').html(prompts[2]);
+</script>
